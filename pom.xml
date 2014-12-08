@@ -7,6 +7,33 @@
 	<version>1.0</version>
 	<name>springweb.sample Maven Webapp</name>
 	<url>http://maven.apache.org</url>
+	<properties>
+		<!-- Generic properties -->
+		<java-version>1.7</java-version>
+		<org.springframework-version>4.0.6.RELEASE</org.springframework-version>
+		<org.springframework.struts-version>3.2.10.RELEASE</org.springframework.struts-version>
+		<org.springframework.security-version>3.1.2.RELEASE</org.springframework.security-version>
+		<rpm.version>${project.version}</rpm.version>
+		<cisco.xmp-version>6.0.2</cisco.xmp-version>
+		<cisco.xmp.wap-version>2.0.0.2</cisco.xmp.wap-version>
+		<batik-version>1.7</batik-version>
+		<org.aspectj-version>1.6.0</org.aspectj-version>
+		<abdera-version>0.4.0-incubating</abdera-version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<struts2-version>2.1.8.1</struts2-version>
+		<rpm.release>10</rpm.release>
+		<!-- Web -->
+		<jsp.version>2.2</jsp.version>
+		<jstl.version>1.2</jstl.version>
+		<servlet.version>2.5</servlet.version>
+
+		<!-- Logging -->
+		<logback.version>1.0.13</logback.version>
+		<slf4j.version>1.7.5</slf4j.version>
+
+		<!-- Test -->
+		<junit.version>4.11</junit.version>
+	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
