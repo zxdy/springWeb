@@ -1,0 +1,43 @@
+.navbar-nav {
+	float: right;
+	margin: 0;
+}
+
+.theme-showcase {
+	position: relative;
+	margin-top: 72px;
+}
+
+p {
+	margin-top: 30px;
+}
+
+.homerow {
+	margin-top: 30px;
+}
+
+select[multiple],select[size] {
+    height: 350px
+}
+
+#datepicker {
+	height: 34px;
+}
+
+.btn {
+		height: 34px;
+}
+
+#process, #query {
+	margin-top: 20px;
+}
+
+.page-header2 {
+	margin-top: 150px;
+	padding-bottom: 9px;
+    border-bottom: 1px solid #eee
+}
+
+.resubmit{
+	float:right;
+}
