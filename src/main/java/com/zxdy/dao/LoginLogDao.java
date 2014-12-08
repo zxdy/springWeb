@@ -7,7 +7,7 @@ import com.zxdy.domain.User;
 
 
 @Repository
-public class LoginDao extends BaseDao{
+public class LoginLogDao extends BaseDao{
 	public void insertLoginLog(LoginLog loginLog){
 		
 	}

@@ -251,6 +251,11 @@
 			<version>2.2.3</version>
 			<classifier>jdk15</classifier>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+			<version>${spring-framework.version}</version>
+        </dependency>  
 	</dependencies>
 	<build>
 		<finalName>springweb.sample</finalName>
