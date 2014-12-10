@@ -5,5 +5,7 @@
   <select id="queryUserInfo" parameterType="map" resultType="java.util.HashMap">
   	select count(*) from users where username=#{username} and password=#{password}
   </select>
-  
+  <select id="findUserByUserNmae" parameterType="map" resultType="java.util.HashMap">
+  	select user_id,username,credits from users where username=#{username}
+  </select>
 </mapper>
