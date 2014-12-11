@@ -20,7 +20,13 @@ public class UserService {
 	private LoginLogDao loginLogDao;
 	
 	public boolean hasMatchUser(String userName,String password){
-		int matchCount=userDao.getMatchCount(userName, password);
+		JSONArray matchCountArr=new JSONArray();
+		int matchCount=0;
+		matchCountArr=userDao.getMatchCount(userName, password);
+		if (matchCountArr != null && matchCountArr.size() > 0) {
+			JSONObject tempItem = matchCountArr.getJSONObject(0);
+			matchCount=tempItem.getInt("COUNT");
+		}
 		return matchCount>0;
 	}
 	public User findUserByUserNmae(String userName){

@@ -12,8 +12,11 @@ import com.zxdy.domain.User;
 
 @Repository
 public class UserDao extends BaseDao{
-	public int getMatchCount(String userName,String password){
-		return 0;
+	public JSONArray getMatchCount(String userName,String password){
+		Map<String, Object> params = new HashMap<String, Object>();
+		params.put("userName", userName);
+		params.put("password", password);
+		return returnData("getMatchCount", params,getJsonConfig());
 	}
 	public JSONArray findUserByUserNmae(final String userName){
 		Map<String, Object> params = new HashMap<String, Object>();

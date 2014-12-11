@@ -17,7 +17,8 @@ public class UserServiceTest {
 	private UserService userService;
 	@Test
 	public void testHasMatchUser() {
-		fail("Not yet implemented");
+		boolean matchCount=userService.hasMatchUser("zxdy", "123456");
+		assertEquals(matchCount,true);
 	}
 
 	@Test

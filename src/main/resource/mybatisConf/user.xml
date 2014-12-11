@@ -2,8 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zxdy.user">
 	
-  <select id="queryUserInfo" parameterType="map" resultType="java.util.HashMap">
-  	select count(*) from users where username=#{username} and password=#{password}
+  <select id="getMatchCount" parameterType="map" resultType="java.util.HashMap">
+  	select count(*) count from users where username=#{userName} and password=#{password}
   </select>
   <select id="findUserByUserNmae" parameterType="map" resultType="java.util.HashMap">
   	select user_id,username,credits from users where username=#{userName}
