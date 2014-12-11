@@ -5,12 +5,13 @@ import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.zxdy.dao.LoginLogDao;
 import com.zxdy.dao.UserDao;
 import com.zxdy.domain.LoginLog;
 import com.zxdy.domain.User;
-
+@Service
 public class UserService {
 	@Autowired
 	private UserDao userDao;
