@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+	<!-- Quartz -->
+	<bean id="dailyJobMonitor"
+		class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+		<property name="jobClass">
+			<value>com.zxdy.quartz.QuartzJob</value>
+		</property>
+		<property name="jobDataAsMap">
+        <map>
+            <entry key="timeout" value="5"/>
+        </map>
+   		</property>
+   		<property name="durability" value="true" />
+		<property name="applicationContextJobDataKey" value="applicationContext"/>
+	</bean>
+	<bean id="DynamicJobTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="dailyJobMonitor" />
+		<property name="cronExpression" value="*/5 * * * * ?" />
+	</bean>
+	<bean id="schedulerFactoryBean" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref local="DynamicJobTrigger" />
+			</list>
+		</property>
+		<property name="applicationContextSchedulerContextKey" value="applicationContext" />
+	</bean>
+</beans>
