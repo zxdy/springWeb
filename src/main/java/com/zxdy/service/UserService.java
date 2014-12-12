@@ -18,7 +18,7 @@ import com.zxdy.dao.LoginLogDao;
 import com.zxdy.dao.UserDao;
 import com.zxdy.domain.LoginLog;
 import com.zxdy.domain.User;
-@Service
+@Service("UserService")
 @Path(value = "/user")
 public class UserService {
 	@Autowired
