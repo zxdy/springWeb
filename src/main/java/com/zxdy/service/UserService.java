@@ -1,6 +1,13 @@
 package com.zxdy.service;
 
 
+import javax.ws.rs.DefaultValue;
+import javax.ws.rs.FormParam;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
@@ -12,6 +19,7 @@ import com.zxdy.dao.UserDao;
 import com.zxdy.domain.LoginLog;
 import com.zxdy.domain.User;
 @Service
+@Path(value = "/user")
 public class UserService {
 	@Autowired
 	private UserDao userDao;
@@ -51,5 +59,16 @@ public class UserService {
 		loginLog.setLoginDate(user.getLastVisit());
 		userDao.updateLoginInfo(user);
 		loginLogDao.insertLoginLog(loginLog);
+	}
+	
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("/1.0/helloworld")
+	public String helloWorld(
+			@DefaultValue("01/01/1970") @FormParam("startDate") String startDate,
+			@DefaultValue("01/01/1970") @FormParam("endDate") String endDate,
+			@DefaultValue("50") @FormParam("count") int count) {
+		String result="hello world!";
+		return result.toString();
 	}
 }
