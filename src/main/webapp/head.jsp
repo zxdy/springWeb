@@ -167,7 +167,7 @@
 			}else if($(".scheduleTime").val()===''){
 				alert("please set the scheduled time");
 			}else{
-			$.post("rs/api/process/1.0/submitjob", {
+			$.post("rs/api/job/1.0/add", {
 				jobName : $(".jobname").val(),
 				jobGroup : $(".servertype").val(),
 				poolName: $(".poollist").val(),

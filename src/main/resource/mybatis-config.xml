@@ -9,5 +9,6 @@
 	<mappers>
 		<mapper resource="mybatisConf/user.xml"/>
 		<mapper resource="mybatisConf/pool.xml"/>
+		<mapper resource="mybatisConf/job.xml"/>
 	</mappers>
 </configuration>

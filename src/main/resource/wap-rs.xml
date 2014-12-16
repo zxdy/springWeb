@@ -22,6 +22,7 @@
 		<jaxrs:serviceBeans>
 			<ref bean="UserService" />
 			<ref bean="PoolService" />
+			<ref bean="JobService" />
 		</jaxrs:serviceBeans>
 		<jaxrs:extensionMappings>
 			<entry key="json" value="application/json" />

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zxdy.user">
+	
+  <insert id="addNewTask" parameterType="map">
+  insert into DAILY_CRON_JOB(JOBNAME,JOBGROUP,JOBSTATUS,CRON,JOBDEC,POOL)
+  values(#{jobName},#{jobGroup},'NORMAL',#{scheduleTime},#{jobDesc},#{poolName})
+  </insert>
+</mapper>

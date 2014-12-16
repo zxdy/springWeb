@@ -16,4 +16,16 @@ public class TaskDao extends BaseDao{
 		Map<String, Object> params = new HashMap<String, Object>();
 		return returnData("getScheduledTask", params,getJsonConfig());
 	}
+
+
+	public boolean addNewTask(String jobName, String jobGroup,
+			String poolName, String scheduleTime, String jobDesc) {
+		Map<String, Object> params = new HashMap<String, Object>();
+		params.put("jobName", jobName);
+		params.put("jobGroup", jobGroup);
+		params.put("poolName", poolName);
+		params.put("scheduleTime", scheduleTime);
+		params.put("jobDesc", jobDesc);
+		return insertData("addNewTask", params);
+	}
 }
