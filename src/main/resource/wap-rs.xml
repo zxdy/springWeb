@@ -21,6 +21,7 @@
 	<jaxrs:server id="restServiceContainer" address="/api">
 		<jaxrs:serviceBeans>
 			<ref bean="UserService" />
+			<ref bean="PoolService" />
 		</jaxrs:serviceBeans>
 		<jaxrs:extensionMappings>
 			<entry key="json" value="application/json" />

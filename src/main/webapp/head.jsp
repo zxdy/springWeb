@@ -69,7 +69,7 @@
 		});
 		$("#servertype").change(function() {
 			$(".poollist").html("<option></option>");
-			$.post("rs/api/reprocess/1.0/getpoollist", {
+			$.post("rs/api/pool/1.0/list", {
 				serverType : $(".servertype").val()
 			}, function(data) {
 				$.each(data,function(i,item){
