@@ -15,6 +15,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
             classpath:applicationContext.xml
             <!-- Spring beans for WAP REST services (i.e. RegistryService, LogService) -->
             classpath:wap-rs.xml
+            classpath:wap-security.xml
             <!-- Quartz beans -->
             <!-- classpath:applicationContext-quartz-dynamic.xml -->
             <!-- classpath:applicationContext-quartz.xml -->

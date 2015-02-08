@@ -1,6 +1,8 @@
 package com.zxdy.service;
 
 
+import java.util.Set;
+
 import javax.ws.rs.DefaultValue;
 import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
@@ -70,5 +72,11 @@ public class UserService {
 			@DefaultValue("50") @FormParam("count") int count) {
 		String result="hello world!";
 		return result.toString();
+	}
+	public Set<String> getUserRoles(String userName) {
+		return null;
+	}
+	public JSONArray createUser(String userName) {
+		return null;
 	}
 }
