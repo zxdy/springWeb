@@ -36,10 +36,6 @@
 			</security:user-service>
 		</security:authentication-provider>
 	</security:authentication-manager>
-	<bean id="afterAuthPostProcessingFilter"
-		class="com.webex.avwatch.filter.PostAuthSpringSecurityFilter">
-		<property name="defaultTargetUrl" value="/index.jsp" />
-	</bean>
 	<bean id="ldapProvider"	class="org.springframework.security.ldap.authentication.LdapAuthenticationProvider">
 		<constructor-arg>
 			<bean
